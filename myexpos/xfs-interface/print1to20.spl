@@ -1,0 +1,9 @@
+MOV R0, 1         // Initialize counter (R0) to 1
+LOOP:
+MOV R1, R0        // Copy the counter value to R1
+PORT P1, R1       // Output the value of R1
+OUT               // Print the value
+ADD R0, R0, 1     // Increment the counter
+CMP R0, 21        // Compare counter with 21 (stop after 20)
+JLT LOOP          // Jump to LOOP if counter < 21
+HALT              // Stop execution
